@@ -6,7 +6,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get upgrade -yV -o DPkg::Options::=--force-confold && \
     apt-get install -yV -o DPkg::Options::=--force-confold \
         wget && \
-    wget --progress=dot:giga -O /kube-apiserver https://storage.googleapis.com/kubernetes-release/release/v1.2.0/bin/linux/amd64/kubelet && \
+    wget --progress=dot:giga -O /kubelet https://storage.googleapis.com/kubernetes-release/release/v1.2.0/bin/linux/amd64/kubelet && \
     chmod +x /kubelet && \
     apt-get remove -yV wget && \
     apt-get autoremove -yV && \
