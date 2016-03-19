@@ -7,7 +7,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get install -yV -o DPkg::Options::=--force-confold \
         wget && \
     wget --progress=dot:giga -O /kube-controller-manager https://storage.googleapis.com/kubernetes-release/release/v1.2.0/bin/linux/amd64/kube-controller-manager && \
-    chmod +x /kubelet && \
+    chmod +x /kube-controller-manager && \
     apt-get remove -yV wget && \
     apt-get autoremove -yV && \
     apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
